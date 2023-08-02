@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\MedicoFormRequest;
 use App\Models\Medico;
 use App\Models\Paciente;
 use Illuminate\Http\Request;
@@ -13,6 +14,13 @@ class MedicoController extends Controller
     {
         $medicos = Medico::all();
         return response()->json($medicos);
+    }
+
+    public function store(MedicoFormRequest $request)
+    {
+        $dadosMedico = $request->validated();
+        $medico = Medico::create($dadosMedico);
+        return response()->json($medico, 201);
     }
 
     public function vincularPaciente(Request $request)
