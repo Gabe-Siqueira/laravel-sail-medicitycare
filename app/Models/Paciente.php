@@ -10,6 +10,8 @@ class Paciente extends Model
 {
     use SoftDeletes, HasFactory;
 
+    protected $table = 'paciente';
+
     protected $fillable = [
         'nome', 'cpf', 'celular',
     ];
