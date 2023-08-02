@@ -17,13 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// AuthController
 Route::post('login', [AuthController::class, 'login']);
+
+// CidadeController
 Route::get('cidades', [CidadeController::class, 'index']);
 Route::get('cidades/{id_cidade}/medicos', [CidadeController::class, 'medicosPorCidade']);
+
+// MedicoController
 Route::get('medicos', [MedicoController::class, 'index']);
+
 Route::group(['middleware' => ['jwt.auth']], function(){
     // AuthController
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('refresh', [AuthController::class, 'refresh']);
     Route::post('me', [AuthController::class, 'me']);
+
+    // MedicoController
+    Route::post('medicos/{id_medico}/pacientes', [MedicoController::class, 'vincularPaciente']);
 });
