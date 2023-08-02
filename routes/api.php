@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CidadeController;
+use App\Http\Controllers\Api\MedicoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('login', [AuthController::class, 'login']);
+Route::get('cidades', [CidadeController::class, 'index']);
+Route::get('cidades/{id_cidade}/medicos', [CidadeController::class, 'medicosPorCidade']);
+Route::get('medicos', [MedicoController::class, 'index']);
 Route::group(['middleware' => ['jwt.auth']], function(){
     // AuthController
     Route::post('logout', [AuthController::class, 'logout']);
