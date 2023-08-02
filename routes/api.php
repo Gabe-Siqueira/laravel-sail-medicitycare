@@ -34,5 +34,6 @@ Route::group(['middleware' => ['jwt.auth']], function(){
     Route::post('me', [AuthController::class, 'me']);
 
     // MedicoController
+    Route::post('medicos', [MedicoController::class, 'store']);
     Route::post('medicos/{id_medico}/pacientes', [MedicoController::class, 'vincularPaciente']);
 });
