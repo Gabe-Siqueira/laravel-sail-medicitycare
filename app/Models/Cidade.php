@@ -17,4 +17,9 @@ class Cidade extends Model
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function medicos()
+    {
+        return $this->hasMany(Medico::class);
+    }
 }
