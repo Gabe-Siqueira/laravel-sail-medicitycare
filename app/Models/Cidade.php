@@ -10,6 +10,8 @@ class Cidade extends Model
 {
     use SoftDeletes, HasFactory;
 
+    protected $table = 'cidades';
+
     protected $fillable = [
         'nome', 'estado',
     ];
