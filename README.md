@@ -1,6 +1,6 @@
-# System MediCityCare
+# System MediCityCare - Laravel Sail
 
-System medical city care.
+System medical city care with Laravel Sail.
 
 # Version System
 
@@ -10,7 +10,9 @@ System medical city care.
 
 # Info
 
-The project was developed using the Laravel framework and Mysql database.
+Branch: <br/>
+  master  (not Laravel-Sail)
+* sail    (with Laravel-Sail)
 
 # Instructions
 
@@ -19,7 +21,7 @@ Git Init repository
 ```bash
 
 # clone the repo
-$ git clone https://github.com/Gabe-Siqueira/laravel-sail-medicitycare.git
+$ git clone -b sail https://github.com/Gabe-Siqueira/laravel-sail-medicitycare.git
 
 # go into app's directory
 $ cd laravel-sal-medicitycare
@@ -44,18 +46,6 @@ $ composer install
 
 ```
 
-Start application database structure:
-
-```bash
-
-# create database tables
-$ php artisan migrate
-
-#insert basic data for the application
-$ php artisan db:seed
-
-```
-
 Generate keys needed for the application:
 
 ```bash
@@ -68,12 +58,12 @@ $ php artisan jwt:secret
 
 ```
 
-start application services:
+Start application:
 
 ```bash
 
-# start serve
-$ php artisan serve --port=8000
+# start
+$ ./vendor/bin/sail up
 
 ```
 
