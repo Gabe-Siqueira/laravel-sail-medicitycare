@@ -10,7 +10,9 @@ System medical city care.
 
 # Info
 
-The project was developed using the Laravel framework and Mysql database.
+Branch: <br/>
+* master  (not Laravel-Sail)
+  sail    (with Laravel-Sail)
 
 # Instructions
 
