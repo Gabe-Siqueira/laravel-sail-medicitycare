@@ -23,7 +23,7 @@ class PacienteFactory extends Factory
         return [
             'nome' => $this->faker->name,
             'cpf' => $this->faker->unique()->numerify('###########'),
-            'celular' => $this->faker->unique()->phoneNumber,
+            'celular' => $this->faker->unique()->numerify('(##)#####-####'),
         ];
     }
 }
