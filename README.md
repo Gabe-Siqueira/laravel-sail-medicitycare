@@ -90,6 +90,12 @@ P@ssw0rd
 
 ```
 
+# Postman
+
+LARAVEL-SAIL-MEDICITYCARE.postman_collection.json
+<br/><br/>
+Import file in Postman to access system requests.
+
 # Contact
 - **Author**: Gabriel Siqueira
 - **E-mail**: gabriel.snsilva2@gmail.com
