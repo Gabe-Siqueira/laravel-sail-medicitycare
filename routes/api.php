@@ -23,10 +23,10 @@ Route::post('login', [AuthController::class, 'login']);
 
 // CidadeController
 Route::get('cidades', [CidadeController::class, 'index']);
-Route::get('cidades/{id_cidade}/medicos', [CidadeController::class, 'medicosPorCidade']);
 
 // MedicoController
 Route::get('medicos', [MedicoController::class, 'index']);
+Route::get('cidades/{id_cidade}/medicos', [MedicoController::class, 'listarPorCidade']);
 
 Route::group(['middleware' => ['jwt.auth']], function(){
     // AuthController
@@ -35,11 +35,9 @@ Route::group(['middleware' => ['jwt.auth']], function(){
     Route::post('me', [AuthController::class, 'me']);
 
     // MedicoController
-    Route::post('medicos', [MedicoController::class, 'store']);
     Route::post('medicos/{id_medico}/pacientes', [MedicoController::class, 'vincularPaciente']);
 
     // PacienteController
-    Route::get('pacientes', [PacienteController::class, 'index']);
     Route::get('/medicos/{id_medico}/pacientes', [PacienteController::class, 'listarPorMedico']);
     Route::post('pacientes', [PacienteController::class, 'store']);
     Route::post('/pacientes/{id_paciente}', [PacienteController::class, 'update']);
