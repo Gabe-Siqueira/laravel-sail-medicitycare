@@ -12,7 +12,7 @@ System medical city care.
 
 Branch: <br/>
 * master  (not Laravel-Sail)<br/>
-  sail    (with Laravel-Sail)
+* sail    (with Laravel-Sail)
 
 # Instructions
 
