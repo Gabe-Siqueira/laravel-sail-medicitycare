@@ -12,12 +12,6 @@ use Illuminate\Http\Request;
 class PacienteController extends Controller
 {
 
-    public function index()
-    {
-        $pacientes = Paciente::all();
-        return response()->json($pacientes);
-    }
-
     public function listarPorMedico($id_medico)
     {
         $medico = Medico::find($id_medico);
