@@ -13,6 +13,6 @@ class MedicoSeeder extends Seeder
      */
     public function run(): void
     {
-        Medico::factory(3)->create();
+        Medico::factory(4)->create();
     }
 }
