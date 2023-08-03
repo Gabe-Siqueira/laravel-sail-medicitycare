@@ -11,7 +11,7 @@ System medical city care with Laravel Sail.
 # Info
 
 Branch: <br/>
-  master  (not Laravel-Sail)
+* master  (not Laravel-Sail)<br/>
 * sail    (with Laravel-Sail)
 
 # Instructions
