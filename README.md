@@ -92,7 +92,7 @@ P@ssw0rd
 
 # Postman
 
-LARAVEL-SAIL-MEDICITYCARE.postman_collection.json
+[LARAVEL-SAIL-MEDICITYCARE.postman_collection.json](LARAVEL-SAIL-MEDICITYCARE.postman_collection.json)
 <br/><br/>
 Import file in Postman to access system requests.
 
