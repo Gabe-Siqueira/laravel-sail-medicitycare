@@ -13,16 +13,4 @@ class CidadeController extends Controller
         $cidades = Cidade::all();
         return response()->json($cidades);
     }
-
-    public function medicosPorCidade($cidadeId)
-    {
-        $cidade = Cidade::with('medicos')->find($cidadeId);
-
-        if (!$cidade) {
-            return response()->json(['message' => 'Cidade não encontrada'], 404);
-        }
-
-        $medicos = $cidade->medicos;
-        return response()->json($medicos);
-    }
 }
