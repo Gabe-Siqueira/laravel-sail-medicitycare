@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CidadeController;
 use App\Http\Controllers\Api\MedicoController;
+use App\Http\Controllers\Api\PacienteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,4 +37,10 @@ Route::group(['middleware' => ['jwt.auth']], function(){
     // MedicoController
     Route::post('medicos', [MedicoController::class, 'store']);
     Route::post('medicos/{id_medico}/pacientes', [MedicoController::class, 'vincularPaciente']);
+
+    // PacienteController
+    Route::get('pacientes', [PacienteController::class, 'index']);
+    Route::get('/medicos/{id_medico}/pacientes', [PacienteController::class, 'listarPorMedico']);
+    Route::post('pacientes', [PacienteController::class, 'store']);
+    Route::post('/pacientes/{id_paciente}', [PacienteController::class, 'update']);
 });
